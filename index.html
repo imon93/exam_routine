@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Routine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 700px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    th {
+      background: #4CAF50;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>📚 Hons 2nd Year Final Exam Routine</h2>
+    <table id="examTable">
+      <tr>
+        <th>Date</th>
+        <th>Day</th>
+        <th>Subject</th>
+        <th>Subject Code</th>
+        <th>Time</th>
+      </tr>
+    </table>
+    <div class="footer">Md. Sabbir Hosen Imon ✨</div>
+  </div>
+
+  <script>
+    // 📝 Sample Exam Routine Data with Subject Code
+    const routine = [
+      { date: "22-10-2025", day: "Wednesday", subject: "English", code: "221109", time: "01:00 PM - 05:00 PM" },
+      { date: "26-10-2025", day: "Sunday", subject: "Political & Consitutional Development in British India", code: "221901", time: "01:00 PM - 05:00 PM" },
+      { date: "29-10-2025", day: "Wednesday", subject: "Political Economy of Bangladesh", code: "221903", time: "01:00 PM - 05:00 PM" },
+      { date: "02-11-2025", day: "Sunday", subject: "Women in Politics & Development", code: "221905", time: "01:00 PM - 05:00 PM" },
+      { date: "05-11-2025", day: "Wednesday", subject: "Oriental Political Thought", code: "221907", time: "01:00 PM - 05:00 PM" },
+      { date: "20-11-2025", day: "Thrusday", subject: "Bangladesh Society & Culture", code: "222115", time: "01:00 PM - 05:00 PM" },
+      { date: "23-11-2025", day: "Sunday", subject: "Economy of Bangladesh", code: "222209", time: "01:00 PM - 05:00 PM" },
+    ];
+
+    const table = document.getElementById("examTable");
+
+    routine.forEach(item => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${item.date}</td>
+        <td>${item.day}</td>
+        <td>${item.subject}</td>
+        <td>${item.code}</td>
+        <td>${item.time}</td>
+      `;
+      table.appendChild(row);
+    });
+  </script>
+</body>
+</html>
